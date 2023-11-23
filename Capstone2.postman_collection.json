@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "2162d226-209b-4a74-94e9-dcb600da82ac",
+		"name": "Capstone2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30754553"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "user register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"Ison@gmail.com\",\r\n    \"password\":\"kenth1206\",\r\n    \"lastName\":\"Espedido\",\r\n    \"firstName\": \"Ison\",\r\n    \"mobileNumber\": \"09999999997\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "admin register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@mail.com\",\r\n    \"password\":\"admin\",\r\n    \"lastName\":\"Gabriel\",\r\n    \"firstName\": \"Kenth\",\r\n    \"mobileNumber\": \"0915123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/register/admin"
+					},
+					"response": []
+				},
+				{
+					"name": "make user an admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzNDQzN2Y4OTBlYWUyOTcxMTM5ZCIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0MzQ0NDB9.u_kwWBbs4g2CdQ9zW1trF68J3sw7DZc2WYVY7ZSDp54"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"654cb6e2fbe2928ec07ce01d\",\r\n    \"isAdmin\":\"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/makeAdmin"
+					},
+					"response": []
+				},
+				{
+					"name": "get details of user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWFlNmY4YzM3MWQzYTFlMTI0ZmZhZSIsImVtYWlsIjoiam9obkBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzMzM0NzM5Nn0.6mFzcjp0JK2OO3rDPU3221Kc2vp_TWw4e5teQpcBUQA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"654cb5b9fbe2928ec07ce010\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/checkDetail"
+					},
+					"response": []
+				},
+				{
+					"name": "user login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"Ison@gmail.com\",\r\n    \"password\":\"ison2000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "admin login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@mail.com\",\r\n    \"password\":\"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "update profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzNDQzN2Y4OTBlYWUyOTcxMTM5ZCIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0OTkzNDF9.re5ydXLzr-za9uDfEJo0sQgbWw5OvyjCqsz7fPP6NgM"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jealvin\",\r\n    \"lastName\": \"Bambico\",\r\n    \"mobileNumber\": \"09123456780\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/654cb676fbe2928ec07ce019"
+					},
+					"response": []
+				},
+				{
+					"name": "Change password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"user_id_here\",\r\n  \"newPassword\": \"new_password_here\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/users/reset-password"
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzNDQzN2Y4OTBlYWUyOTcxMTM5ZCIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0OTkzNDF9.re5ydXLzr-za9uDfEJo0sQgbWw5OvyjCqsz7fPP6NgM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/users/getAllUsers"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get all products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGNiNWI5ZmJlMjkyOGVjMDdjZTAxMCIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1ODI4OTN9.R9TRyZSfRZIWSe9LtFLjJYadD5JUHmgPpRafv2-f5Fs"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/products/getAllProducts"
+					},
+					"response": []
+				},
+				{
+					"name": "Get active products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGNiNWI5ZmJlMjkyOGVjMDdjZTAxMCIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk1ODI4OTN9.R9TRyZSfRZIWSe9LtFLjJYadD5JUHmgPpRafv2-f5Fs"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/products/getAllActiveProducts"
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific product via ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/products/654cb9d7fbe2928ec07ce02e"
+					},
+					"response": []
+				},
+				{
+					"name": "Create new product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzNDQzN2Y4OTBlYWUyOTcxMTM5ZCIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0MzQ0NDB9.u_kwWBbs4g2CdQ9zW1trF68J3sw7DZc2WYVY7ZSDp54"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"OnePiece Shanks\",\r\n\t\"description\": \"Animated Graphic T-Shirt, Loose, Oversized.\",\r\n\t\"price\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/products/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWFlNmY4YzM3MWQzYTFlMTI0ZmZhZSIsImVtYWlsIjoiam9obkBtYWlsLmNvbSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzMzM0NzM5Nn0.6mFzcjp0JK2OO3rDPU3221Kc2vp_TWw4e5teQpcBUQA"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n\"name\": \"OnePiece Zoroooooooo\",\r\n\"description\": \"Animated Graphic T-Shirt, Loose, Oversized\",\r\n\"price\": 350\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/products/654cb9e1fbe2928ec07ce031"
+					},
+					"response": []
+				},
+				{
+					"name": "Archive product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzNDQzN2Y4OTBlYWUyOTcxMTM5ZCIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0ODg0ODB9.PW2AgUUWmEwXdaslcIX9AqovfcEkTglnHfDkhTQIjBg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isActive\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/products/654cb9f3fbe2928ec07ce034/archive"
+					},
+					"response": []
+				},
+				{
+					"name": "Activate Product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzNDQzN2Y4OTBlYWUyOTcxMTM5ZCIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0ODg0ODB9.PW2AgUUWmEwXdaslcIX9AqovfcEkTglnHfDkhTQIjBg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/products/654cb9f3fbe2928ec07ce034"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "add to cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTQ0OWQxYTgzMzZiN2JmZTM2MjE3NiIsImVtYWlsIjoia2tAbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjMzMzQ3ODEzfQ.snCHVCTShRTrdTUbb7jjL5dPs9gqx7XPbqIizoHmV2U"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"productId\" : \"654cb9d7fbe2928ec07ce02e\",\r\n\t\"quantity\": 3\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/cart/addToCart"
+					},
+					"response": []
+				},
+				{
+					"name": "get user cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTQ0OWQxYTgzMzZiN2JmZTM2MjE3NiIsImVtYWlsIjoia2tAbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjMzMzQ3ODEzfQ.snCHVCTShRTrdTUbb7jjL5dPs9gqx7XPbqIizoHmV2U"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/cart/myCart"
+					},
+					"response": []
+				},
+				{
+					"name": "removeProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNTQ0OWQxYTgzMzZiN2JmZTM2MjE3NiIsImVtYWlsIjoia2tAbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjMzMzQ1MzQxfQ.--Ehye5fW31CmBo5EwjkmeZ9iOdeAenTYuulnav4KqI"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"654cb9f3fbe2928ec07ce034\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/cart/removeProduct"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "get all orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzNDQzN2Y4OTBlYWUyOTcxMTM5ZCIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0OTkzNDF9.re5ydXLzr-za9uDfEJo0sQgbWw5OvyjCqsz7fPP6NgM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/orders/allOrders"
+					},
+					"response": []
+				},
+				{
+					"name": "Create order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzNDQzN2Y4OTBlYWUyOTcxMTM5ZCIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0OTkzNDF9.re5ydXLzr-za9uDfEJo0sQgbWw5OvyjCqsz7fPP6NgM"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"totalPrice\": 700,\r\n    \"products\": [\r\n        {\r\n            \"name\": \"OnePiece Luffy\",\r\n            \"productId\": \"654b60d793f3fa26f79c64cc\",\r\n            \"quantity\": 2,\r\n            \"totalPerProduct\": 350\r\n        }\r\n    ],\r\n    \"userId\": \"654b33559e489da546a8fc20\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/orders/users/checkout"
+					},
+					"response": []
+				},
+				{
+					"name": "get user details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NGIzNDQzN2Y4OTBlYWUyOTcxMTM5ZCIsImVtYWlsIjoiYWRtaW5AbWFpbC5jb20iLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2OTk0OTkzNDF9.re5ydXLzr-za9uDfEJo0sQgbWw5OvyjCqsz7fPP6NgM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:4000/orders/654cbffe90f0d1ec65e721dd/userDetails"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
