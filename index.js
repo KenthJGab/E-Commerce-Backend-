@@ -34,10 +34,10 @@ mongoose.connect("mongodb+srv://admin:admin@zuitt-bootcamp.ijcrtcy.mongodb.net/b
 mongoose.connection.once('open', () => console.log('Now connected to MongoDB Atlas.'));
 
 //AWS Server
-app.use('/b1/users', userRoutes);
-app.use('/b1/products', productRoutes);
-app.use('/b1/orders', orderRoutes);
-app.use('/b1/cart', cartRoutes);
+app.use('/E-Commerce-Backend-/users', userRoutes);
+app.use('/E-Commerce-Backend-/products', productRoutes);
+app.use('/E-Commerce-Backend-/orders', orderRoutes);
+app.use('/E-Commerce-Backend-/cart', cartRoutes);
 
 //Test LocalHost
 // app.use('/users', userRoutes);
